@@ -5,15 +5,16 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout-87cd145e.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-4253c072.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-e40c6eaf.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-1b66d90d.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-7a6d4846.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-1827a5b0.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/projects/_page.svelte-9c3c2414.js">
+		<link href="./_app/immutable/assets/_layout.436dce5f.css" rel="stylesheet">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.b09f3593.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.d9d0aa8f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.c94e5f7f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.601849f0.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.svelte.dd5a283f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.c24b7fc2.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.js.fb1865a6.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/_layout.da46b06b.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/projects-page.svelte.4a24512f.mjs">
 	</head>
 	<body>
 		<div>
@@ -54,22 +55,30 @@
       <button type="submit" class="bg-shadowColor rounded p-1 text-center w-3/4 text-accentColor self-center mt-2 hover:bg-tertiaryColor hover:text-shadowColor font-semibold">Submit</button></form></footer></div>
 
 
-		<script type="module" data-sveltekit-hydrate="fkrz85">
-			import { start } from "./_app/immutable/start-4253c072.js";
+			
+			<script>
+				{
+					__sveltekit_1jzfwmq = {
+						env: {},
+						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				env: {},
-				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="fkrz85"]').parentNode,
-				version: "1677120046528",
-				hydrate: {
-					node_ids: [0, 3],
-					data: [null,null],
-					form: null,
-					error: null
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.b09f3593.mjs"),
+						import("./_app/immutable/entry/app.601849f0.mjs")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_1jzfwmq.element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>
