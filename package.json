@@ -12,7 +12,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-vercel": "next",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.8.3",
 		"autoprefixer": "^10.4.13",
 		"gh-pages": "^5.0.0",
 		"postcss": "^8.4.21",
@@ -26,6 +26,7 @@
 		"@fontsource/barlow": "^4.5.9",
 		"@fontsource/fraunces": "^4.5.11",
 		"@iconify/svelte": "^3.0.1",
+		"@sveltejs/adapter-static": "^2.0.1",
 		"pexels": "^1.4.0"
 	}
 }
