@@ -1,5 +1,6 @@
 <script>
   import { fly } from 'svelte/transition';
+  import {base} from '$app/paths'
 
   // Components
   import Menu from "./Menu.svelte";
@@ -33,7 +34,7 @@
   <div class:blur={topNavIsActive} class="flex items-center justify-between w-full py-6 lg:px-8">
     <!-- Logo -->
     <div>
-      <a href='/' class="text-[#163A37] font-black text-2xl md:text-4xl tracking-wide">
+      <a href={base} class="text-[#163A37] font-black text-2xl md:text-4xl tracking-wide">
         Forrest S
       </a>
     </div>
@@ -47,9 +48,9 @@
       <Icon icon="ri:git-branch-fill" class={`text-shadowColor text-4xl`} />
     </div>
     <ul class="hidden md:flex items-center space-x-10 text-primaryColor font-medium text-lg">
-      <li><a href="/" on:click|preventDefault={() => scrollToElement("#section2")}>About</a></li>
-      <li><a href="/" on:click|preventDefault={() => scrollToElement("#section3")}>Knowledge</a></li>
-      <li><a href="/" on:click|preventDefault={() => scrollToElement("#section4")}>Projects</a></li>
+      <li><a href={base} on:click|preventDefault={() => scrollToElement("#section2")}>About</a></li>
+      <li><a href={base} on:click|preventDefault={() => scrollToElement("#section3")}>Knowledge</a></li>
+      <li><a href={base} on:click|preventDefault={() => scrollToElement("#section4")}>Projects</a></li>
       <ContactButton {closeMenu}/>
     </ul>
   </div>

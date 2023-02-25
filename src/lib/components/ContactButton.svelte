@@ -1,5 +1,6 @@
 <script>
   export let closeMenu;
+  import {base} from '$app/paths'
 
   const scrollToElement = (selector) => {
     const elementTo = document.querySelector(selector);
@@ -18,5 +19,5 @@
 </script>
 
 <button class='bg-secondaryColor py-3 px-7 text-textColor rounded-full uppercase border-0 font-medium'>
-  <a href='/' on:click|preventDefault={() => scrollToElement("#footer")}>Contact</a>
+  <a href={base} on:click|preventDefault={() => scrollToElement("#footer")}>Contact</a>
 </button>

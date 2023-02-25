@@ -1,5 +1,6 @@
 <script>
   import { fly } from "svelte/transition";
+  import {base} from '$app/paths'
 
   import Feature from "$lib/components/Feature.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
@@ -48,12 +49,12 @@
     </p>
     <div class="z-30 mt-10 lg:mt-16">
       <a
-        href={"/"}
+        href={base}
         class={`z-30`}
         on:click|preventDefault={() => scrollToElement("#section1")}
       >
         <img
-          src="/images/down-arrow-svgrepo-com.svg"
+          src="{base}/images/down-arrow-svgrepo-com.svg"
           alt="Arrow down"
           class="h-36 lg:h-44 motion-safe:animate-bounce"
         />

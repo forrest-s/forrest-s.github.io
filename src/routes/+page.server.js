@@ -1,3 +1,5 @@
+import { base } from '$app/paths'
+
 export function load() {
   const photos = {
     test: ''
@@ -47,7 +49,7 @@ export function load() {
 
   const projects = [
     {
-      image: "/images/lotr-app.png",
+      image: `${base}/images/lotr-app.png`,
       content:
         "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
       title: "Characters of the Lord of the Rings",
@@ -55,7 +57,7 @@ export function load() {
       id: 1,
     },
     {
-      image: "/images/bounty-hunter-app.png",
+      image: `${base}/images/bounty-hunter-app.png`,
       content:
         "Exercise tracker app with authentication and login. Log in and start tracking workouts and ask questions on the forum. App utilizes React for the front-end, with react-router helping with the different routes, and Node.js/Express as the backend. MongoDB is used for the database and Mongoose helps with the schema creation and object-document mapper. Authentication is handled using tokens and encryption. App is live with heroku.",
       title: "Bounty Hunter",
@@ -63,7 +65,7 @@ export function load() {
       id: 2,
     },
     {
-      image: "/images/books-weve-read.png",
+      image: `${base}/images/books-weve-read.png`,
       content:
         "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
       title: "Books We've Read Database",
@@ -71,7 +73,7 @@ export function load() {
       id: 3,
     },
     {
-      image: "/images/exercise-tracker.png",
+      image: `${base}/images/exercise-tracker.png`,
       content:
         "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
       title: "Exercise Tracker/Forum",
