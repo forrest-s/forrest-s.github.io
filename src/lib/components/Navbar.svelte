@@ -48,7 +48,7 @@
       <Icon icon="ri:git-branch-fill" class={`text-shadowColor text-4xl`} />
     </div>
     <ul class="hidden md:flex items-center space-x-10 text-primaryColor font-medium text-lg">
-      <li><a href={base} on:click|preventDefault={() => scrollToElement("#section2")}>About</a></li>
+      <li><a href={base} on:click|preventDefault={() => scrollToElement("#section1")}>About</a></li>
       <li><a href={base} on:click|preventDefault={() => scrollToElement("#section3")}>Knowledge</a></li>
       <li><a href={base} on:click|preventDefault={() => scrollToElement("#section4")}>Projects</a></li>
       <ContactButton {closeMenu}/>

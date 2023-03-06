@@ -5,7 +5,7 @@
   export let align;
   let color;
 
-  $: if (theme === "green") color = "text-accentColor";
+  $: if (theme === "green") color = "text-secondaryAccentColor";
   $: if (theme === "blue") color = "text-textColor";
 </script>
 
@@ -19,8 +19,9 @@
   {title}
 </h2>
 <p
-  class={`font-medium text-highlightColor leading-7 md:max-w-md
+  class={`font-medium leading-7 md:max-w-md
     ${color ? color : "text-textColor"} 
+    ${theme === 'green' && 'bg-backgroundColor rounded'}
     ${align === "left" ? "text-left" : "text-center"}
   `}
 >

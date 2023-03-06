@@ -8,8 +8,7 @@ export function load() {
   const features = [
     {
       title: "Innovative Solutions",
-      content:
-        "Unlock the power of innovation with a software engineer who brings a unique combination of compassion and problem-solving to the table. With a wealth of experience and a proven track record of managing time, projects, and people. I excel at collaborating with teams to deliver cutting-edge solutions that achieve mission-critical objectives with precision and accuracy. Let me help you drive your technology projects to success.",
+      content: "As a web developer with a vast range of experience, I bring a unique perspective to the table. My background includes roles such as a Military Aviation Mechanic, a Warehouse General Mechanic, a Warehouse Production Worker, a Shipping/Receiving Coordinator, and a Construction Project Manager. Through these roles, I've honed my problem-solving skills, attention to detail, and ability to work efficiently in fast-paced environments. This diverse background has given me the ability to adapt quickly to new challenges and has shaped me into a well-rounded developer.",
       color: "yellow",
       mobileImg: "https://images.unsplash.com/photo-1577209299418-485f60c0d4de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1069&q=80",
       desktopImg: "https://images.unsplash.com/photo-1577209299418-485f60c0d4de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1069&q=80",
@@ -17,8 +16,7 @@ export function load() {
     },
     {
       title: "Experienced Leadership",
-      content:
-        "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digitial places.",
+      content: "My path to tech was not a straight line, but I believe this has given me a well-rounded perspective and a strong work ethic. I understand the importance of clear communication, setting expectations, and meeting deadlines. My experience in project management has also taught me to be proactive and anticipate problems before they occur. I am always looking for ways to improve my skills and stay up-to-date with the latest technologies, which ensures that my clients always receive the best possible service.",
       color: "red",
       mobileImg: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
       desktopImg: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
@@ -50,32 +48,36 @@ export function load() {
   const projects = [
     {
       image: `${base}/images/lotr-app.png`,
+      url: 'https://charactersoflordoftherings.surge.sh/',
       content:
-        "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+        "This full-stack application connects to The-One-API to retrieve character information from the Lord of the Rings franchise. Each card displays detailed character information and, if available, famous movie quotes. The front-end is built using React, while the back-end is powered by Node.js and Express.",
       title: "Characters of the Lord of the Rings",
       technologies: ['React'],
       id: 1,
     },
     {
       image: `${base}/images/bounty-hunter-app.png`,
+      url: '',
       content:
-        "Exercise tracker app with authentication and login. Log in and start tracking workouts and ask questions on the forum. App utilizes React for the front-end, with react-router helping with the different routes, and Node.js/Express as the backend. MongoDB is used for the database and Mongoose helps with the schema creation and object-document mapper. Authentication is handled using tokens and encryption. App is live with heroku.",
+        "This is a full-stack application that utilizes a database for storing bounties. Users can add bounties to the database and track their progress. The front-end is built using React, while the back-end is powered by Node.js and Express. The database is managed using MongoDB and Mongoose, which facilitates schema creation.",
       title: "Bounty Hunter",
       technologies: ['React', 'Express.js', 'Node.js'],
       id: 2,
     },
     {
       image: `${base}/images/books-weve-read.png`,
+      url: '',
       content:
-        "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+        "This web application serves as a book database, allowing users to add books along with their respective authors and genres. Users can either add a new book or explore existing books, genres, and authors. The front-end of the application is built using the React library, with react-router facilitating the routing of different views. The back-end is powered by the Express/Node.js framework, with MongoDB as the database for book storage. The Mongoose library is used for schema creation and object-document mapping. The application also features authentication via token-based encryption. The application is live on the Heroku platform.",
       title: "Books We've Read Database",
       technologies: ['React', 'Express.js', 'Node.js', 'MongoDB'],
       id: 3,
     },
     {
       image: `${base}/images/exercise-tracker.png`,
+      url: '',
       content:
-        "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+        "The Exercise Tracker application incorporates authentication and login features to enable users to securely track their workouts and participate in the forum. The front-end of the application is built with React, utilizing react-router for effective routing, while the back-end is powered by Node.js and Express. MongoDB serves as the database, with Mongoose supporting schema creation and object-document mapping. The app ensures security through token-based authentication and encryption. Additionally, the application is hosted live on Heroku for easy access.",
       title: "Exercise Tracker/Forum",
       technologies: ['React', 'Express.js', 'Node.js', 'MongoDB'],
       id: 4,
