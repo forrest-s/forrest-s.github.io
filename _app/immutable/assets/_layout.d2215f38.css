@@ -930,10 +930,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-highlightColor {
-  --tw-text-opacity: 1;
-  color: rgb(50 85 72 / var(--tw-text-opacity));
-}
 .text-primaryColor {
   --tw-text-opacity: 1;
   color: rgb(22 58 55 / var(--tw-text-opacity));
@@ -945,6 +941,10 @@ video {
 .text-project-darker-blue {
   --tw-text-opacity: 1;
   color: hsl(213 9% 39% / var(--tw-text-opacity));
+}
+.text-secondaryAccentColor {
+  --tw-text-opacity: 1;
+  color: rgb(83 108 96 / var(--tw-text-opacity));
 }
 .text-secondaryColor {
   --tw-text-opacity: 1;
