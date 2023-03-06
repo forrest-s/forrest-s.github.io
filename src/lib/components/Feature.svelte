@@ -1,6 +1,6 @@
 <script>
   import CardContent from "./CardContent.svelte";
-
+  import {base} from '$app/paths'
   export let feature;
   export let width;
   export let reverse;
@@ -22,7 +22,7 @@
       <CardContent align={width > 768 ? 'left' : ''} title={feature.title} content={feature.content} theme={feature.theme} />
     <div class="flex flex-col">
       <a
-        href={"/"}
+        href='https://www.linkedin.com/in/yulerik'
         class={`relative block mt-8 text-lg text-project-dark-blue font-fraunces font-black tracking-wider uppercase learn-more after:content-[''] after:block after:w-[155px] after:h-3 after:absolute after:bottom-0 after:right-[50%] after:translate-x-2/4 after:-z-10 after:rounded-full ${width > 768 ? 'text-left pl-[8px] after:left-[0] after:translate-x-0' : 'text-center'}`}
         class:red-after={feature.color === "red"}
         class:yellow-after={feature.color === "yellow"}>Learn More</a
