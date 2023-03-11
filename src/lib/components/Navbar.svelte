@@ -33,7 +33,8 @@
 >
   <div class:blur={topNavIsActive} class="flex items-center justify-between w-full py-6 lg:px-8">
     <!-- Logo -->
-    <div>
+    <div class='flex gap-4 items-center'>
+      <img class='w-10 rounded-[50%]' src='{base}/images/profile.jpeg' alt='profile pic' />
       <a href={base} class="text-[#163A37] font-black text-2xl md:text-4xl tracking-wide">
         Forrest S
       </a>
