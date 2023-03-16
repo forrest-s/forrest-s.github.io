@@ -84,7 +84,7 @@ export function load() {
     },
     {
       image: `${base}/images/pokemon.png`,
-      url: 'pokemon-fresh.deno.dev',
+      url: 'https://pokemon-fresh.deno.dev',
       content:
         'This pokemon viewing website is created using newer web technologies, deno and fresh. The pokemon site has a pokedex for viewing your favorite pokemon and their stats/moves. This site also gathers the pokemon informatin from a third party api call. This site is deployed using deno deploy.',
       title: "Pokedex",
@@ -93,7 +93,7 @@ export function load() {
     },
     {
       image: `${base}/images/lotrSvelte.png`,
-      url: 'pokemon-fresh.deno.dev',
+      url: 'https://lotr-svelte.vercel.app',
       content:
         'This is another lord of the rings character viewing website. Instead, I tried diffferent technologies and improved on the design. This lotr character site uses svelte as a compiler and sveltekit as a metaframework deployed on  vercel.',
       title: "Lotr Characters",
