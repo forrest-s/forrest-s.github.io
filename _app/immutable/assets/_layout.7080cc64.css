@@ -632,11 +632,11 @@ video {
 .hidden {
   display: none;
 }
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
 .h-36 {
   height: 9rem;
-}
-.h-\[600px\] {
-  height: 600px;
 }
 .h-\[80vh\] {
   height: 80vh;
@@ -796,6 +796,10 @@ video {
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1089,8 +1093,8 @@ video {
 }
 @media (min-width: 768px) {
 
-  .md\:mt-96 {
-    margin-top: 24rem;
+  .md\:mt-2 {
+    margin-top: 0.5rem;
   }
 
   .md\:flex {
