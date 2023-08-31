@@ -25,6 +25,7 @@
 
 <div
   bind:this={element}
+  class='h-full'
   class:visible={isVisible}
 >
   <slot {isVisible} />

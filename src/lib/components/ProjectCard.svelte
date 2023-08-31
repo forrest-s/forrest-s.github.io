@@ -1,6 +1,6 @@
 <script>
   import RevealOnScroll from "../utils/RevealOnScroll.svelte";
-  import ProjectContent from "./ProjectContent.svelte";
+  import ProjectContent from "./subcomponents/ProjectContent.svelte";
   export let projects;
 </script>
 
@@ -10,7 +10,7 @@
   >
     Personal Ventures
   </h3>
-  <!-- <hr class='border-primaryColor border-2'/> -->
+  <hr class='border-primaryColor border-2'/>
   <section class="md:grid lg:grid-cols-2 gap-10 max-w-[1400px] mx-auto">
     {#each projects as project (project.id)}
       <RevealOnScroll let:isVisible>

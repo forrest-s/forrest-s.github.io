@@ -1,7 +1,7 @@
 <script>
   import { fly } from "svelte/transition";
   import Icon from "@iconify/svelte";
-  import ContactButton from "./ContactButton.svelte";
+  import ContactButton from "./subcomponents/ContactButton.svelte";
   import {base} from '$app/paths'
   export let closeMenu;
 

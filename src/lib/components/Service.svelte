@@ -1,24 +1,29 @@
 <script>
   import RevealOnScroll from "$lib/utils/RevealOnScroll.svelte";
-  import CardContent from "./CardContent.svelte";
+  import CardContent from "./subcomponents/CardContent.svelte";
 
   export let service;
   export let width;
-  $: backgroundImg = width > 430 ? service.desktopImg : service.mobileImg;
+  export let reverse;
+
+  const divClass = `h-full md:self-start ${reverse ? "md:mt-2" : "md:mt-2"}`
+
+  $: backgroundImg = width > 430 ? service.desktopImg : service.mobileImg ? service.mobileImg : service.desktopImg;
 </script>
 
 <div
   style="--img: url('{backgroundImg}')"
-  class="backgroundImage h-[600px] md:h-[700px] flex justify-center items-end gutter"
+  class="backgroundImage h-full md:h-[700px] flex justify-center items-end gutter"
 >
-  <div class="md:self-start md:mt-96">
+  <div class={divClass}>
     <RevealOnScroll>
-      <div class="py-16 max-w-sm">
+      <div class="py-16 max-w-sm h-full flex flex-col justify-between">
         <CardContent
           align='center'
           theme={service.colorTheme}
           title={service.title}
           content={service.content}
+          technologies={service.technologies}
         />
       </div>
     </RevealOnScroll>

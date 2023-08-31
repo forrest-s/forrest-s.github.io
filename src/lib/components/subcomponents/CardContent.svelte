@@ -3,6 +3,7 @@
   export let content;
   export let theme;
   export let align;
+  export let technologies;
   let color;
 
   $: if (theme === "green") color = "text-secondaryAccentColor";
@@ -11,7 +12,7 @@
 
 <h2
   class={`font-fraunces text-textColor text-3xl lg:text-4xl mb-6
-    ${theme === 'green' && 'bg-primaryColor rounded p-2 pl-10 pr-10'}
+    ${theme === 'green' && 'bg-secondaryColor rounded p-2 pl-10 pr-10'}
     ${color ? color : "text-textColor"} 
     ${align === "left" ? "text-left" : "text-center"}
   `}
@@ -27,3 +28,10 @@
 >
   {content}
 </p>
+{#if technologies}
+  <p class='flex justify-center'>
+    {#each technologies as technology}
+    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-textColor bg-secondaryColor last:mr-0 mr-1">{technology}</span>
+    {/each}
+  </p>
+{/if}

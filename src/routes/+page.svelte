@@ -2,7 +2,7 @@
   import { fly } from "svelte/transition";
   import {base} from '$app/paths'
 
-  import Feature from "$lib/components/Feature.svelte";
+  import About from "$lib/components/About.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
   import Service from "$lib/components/Service.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
@@ -28,24 +28,20 @@
 <svelte:window bind:innerWidth={width} />
 
 <!-- Header -->
-<header
-  class="relative min-h-[620px] md:min-h-screen w-full bg-contain bg-no-repeat z-40"
->
+<header class="relative min-h-[620px] md:min-h-screen w-full bg-contain bg-no-repeat z-40">
   <img
-    src="https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    src={data.hero.desktopImg}
     class="absolute -z-[100] object-cover w-full h-full"
     alt="trees background"
   />
   <div class="gutter flex flex-col justify-center items-center">
-    <h1
-      class="z-20 mt-6 pt-20 lg:pt-44 pb-16 text-primaryColor text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center uppercase font-fraunces tracking-[0.5rem] font-black"
-    >
-      software engineer
+    <h1 class="z-20 mt-6 pt-20 lg:pt-44 pb-16 text-primaryColor text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center uppercase font-fraunces tracking-[0.5rem] font-black">
+      {data.hero.title}
       <hr class="border-primaryColor border-4" />
-      web developer
+      {data.hero.subTitle}
     </h1>
     <p class="p-2 rounded bg-backgroundColor text-textColor text-xl md:text-xl lg:text-2xl xl:text-3xl text-center font-fraunces tracking-[0.5rem] font-black">
-      i bring ideas to life through the art of coding.
+      {data.hero.content}
     </p>
     <div class="z-30 mt-10 lg:mt-16">
       <a
@@ -63,13 +59,13 @@
   </div>
 </header>
 
-<!-- Features -->
-{#each data.features as feature (feature.title)}
-  <section id={"section" + feature.id} class="max-w-[1960px] mx-auto">
-    {#if data.features.indexOf(feature) % 2 !== 0}
-      <Feature {width} {feature} reverse={false}/>
+<!-- About -->
+{#each data.about as info (info.title)}
+  <section id={"section" + info.id} class="max-w-[1960px] mx-auto">
+    {#if data.about.indexOf(info) % 2 !== 0}
+      <About {width} {info} reverse={false}/>
     {:else}
-      <Feature {width} {feature} reverse={true} />
+      <About {width} {info} reverse={true} />
     {/if}
   </section>
 {/each}
@@ -77,9 +73,15 @@
 <!-- Services -->
 <div id='section3' class="md:flex max-w-[1960px] mx-auto">
   {#each data.services as service (service.id)}
+  {#if data.services.indexOf(service) % 2 !== 0}
     <section id={"service-section" + service.id} class="flex-1">
-      <Service {service} {width} />
+      <Service {service} {width} reverse={true}/>
     </section>
+  {:else}
+    <section id={"service-section" + service.id} class="flex-1">
+      <Service {service} {width} reverse={false}/>
+    </section> 
+  {/if}
   {/each}
 </div>
 

@@ -5,7 +5,7 @@
   // Components
   import Menu from "./Menu.svelte";
   import Icon from "@iconify/svelte";
-  import ContactButton from './ContactButton.svelte';
+  import ContactButton from './subcomponents/ContactButton.svelte';
 
   // Variables
   export let topNavIsActive;
@@ -40,6 +40,7 @@
       </a>
     </div>
     <!-- Hamburger -->
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div
       class={`transition-all md:hidden ${
         topNavIsActive === true ? "hamburger-transition noclick" : ""
@@ -58,6 +59,7 @@
 
   <!-- Mobile Menu -->
   {#if topNavIsActive === true}
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="absolute top-0 left-0 w-screen h-screen bg-black/25" transition:fly on:click|self={closeMenu}>
       <div class="z-50 ml-5 mr-5 mt-20 relative" on:click|self={closeMenu}>
         <Menu {closeMenu} />
