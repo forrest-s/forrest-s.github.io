@@ -4,7 +4,7 @@
 
   import About from "$lib/components/About.svelte";
   import Gallery from "$lib/components/Gallery.svelte";
-  import Service from "$lib/components/Service.svelte";
+  import Knowledge from "$lib/components/Knowledge.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
 
   export let data;
@@ -16,7 +16,7 @@
     if (!elementTo) return;
 
     let position = elementTo.getBoundingClientRect().top;
-    let offset = position + window.pageYOffset;
+    let offset = position + window.scrollY;
 
     window.scrollTo({
       top: offset,
@@ -70,16 +70,16 @@
   </section>
 {/each}
 
-<!-- Services -->
+<!-- Knowledge -->
 <div id='section3' class="md:flex max-w-[1960px] mx-auto">
-  {#each data.services as service (service.id)}
-  {#if data.services.indexOf(service) % 2 !== 0}
-    <section id={"service-section" + service.id} class="flex-1">
-      <Service {service} {width} reverse={true}/>
+  {#each data.knowledges as knowledge (knowledge.id)}
+  {#if data.knowledges.indexOf(knowledge) % 2 !== 0}
+    <section id={"knowledge-section" + knowledge.id} class="flex-1">
+      <Knowledge {knowledge} {width} reverse={true}/>
     </section>
   {:else}
-    <section id={"service-section" + service.id} class="flex-1">
-      <Service {service} {width} reverse={false}/>
+    <section id={"knowledge-section" + knowledge.id} class="flex-1">
+      <Knowledge {knowledge} {width} reverse={false}/>
     </section> 
   {/if}
   {/each}

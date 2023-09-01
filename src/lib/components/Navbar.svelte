@@ -17,7 +17,7 @@
     if (!elementTo) return;
 
     let position = elementTo.getBoundingClientRect().top;
-    let offset = position + window.pageYOffset;
+    let offset = position + window.scrollY;
 
     window.scrollTo({
       top: offset,

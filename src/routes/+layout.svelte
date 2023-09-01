@@ -20,6 +20,10 @@
   let scrollable = true;
   let width;
 
+  let fullName = ''
+  let email = ''
+  let message = ''
+
   // Reactive variables
   $: if (browser) document.body.classList.toggle("noscroll", !scrollable);
 
@@ -56,18 +60,19 @@
       Forrest S
     </div>
     <ul class="flex justify-center items-center gap-6">
-      <li><a href="https://www.linkedin.com/in/yulerik"><Icon icon="mdi:linkedin" class={`text-secondaryColor text-4xl`} /></a></li>
-      <li><a href="https://www.github.com/forrest-s"><Icon icon="mdi:github" class={`text-secondaryColor text-4xl`} /></a></li>
+      <li><a href="https://www.linkedin.com/in/yulerik" target="_blank" rel="noreferrer"><Icon icon="mdi:linkedin" class={`text-secondaryColor text-4xl`} /></a></li>
+      <li><a href="https://www.github.com/forrest-s" target="_blank" rel="noreferrer"><Icon icon="mdi:github" class={`text-secondaryColor text-4xl`} /></a></li>
     </ul>
   </section>
   <form class="flex flex-col p-4 rounded gap-1 text-accentColor bg-primaryColor" action="https://formspree.io/f/xrgvbvqr" method="POST" accept-charset='utf-8' name='simple-contact-form'>
     <p>Feel free to contact me for any inquires or opportunities.</p>
     <label for="full-name" class="text-tertiaryColor">Name</label>
-    <input id='full-name' name="name" type="text" class="bg-primaryColor border-b-2 border-black" value="">
+    <input id='full-name' name="name" type="text" class="bg-primaryColor border-b-2 border-black" bind:value={fullName}>
     <label for="email-address" class="text-tertiaryColor">E-mail</label>
-    <input id='email-address' type="email" class="bg-primaryColor border-b-2 border-black" name='_replyto' value="">
+    <input id='email-address' type="email" class="bg-primaryColor border-b-2 border-black" name='_replyto' bind:value={email}>
     <label  for="message" class="text-tertiaryColor">Message</label>
-    <textarea id='message' name="message" type="text" class="bg-primaryColor border-2 border-black rounded"></textarea>
+    <textarea id='message' name="message" type="text" class="bg-primaryColor border-2 border-black rounded" bind:value={message}></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-    <button type="submit" class="bg-shadowColor rounded p-1 text-center w-3/4 text-accentColor self-center mt-2 hover:bg-tertiaryColor hover:text-shadowColor font-semibold">Submit</button></form>
-  </footer>
+    <button type="submit" class="bg-shadowColor rounded p-1 text-center w-3/4 text-accentColor self-center mt-2 hover:bg-tertiaryColor hover:text-shadowColor font-semibold">Submit</button>
+  </form>
+</footer>

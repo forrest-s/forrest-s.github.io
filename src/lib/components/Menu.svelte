@@ -20,6 +20,7 @@
   
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <ul
   transition:fly={{ y: -10 }}
   class="bg-primaryColor text-accentColor relative w-full sm:w-1/2 flex flex-col gap-2 justify-center items-center transition-all py-6 rounded-md drop-shadow-xl"

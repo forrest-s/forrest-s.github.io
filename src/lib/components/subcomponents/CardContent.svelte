@@ -22,7 +22,7 @@
 <p
   class={`font-medium leading-7 md:max-w-md
     ${color ? color : "text-textColor"} 
-    ${theme === 'green' && 'bg-backgroundColor rounded'}
+    ${theme === 'green' && 'bg-backgroundColor/90 rounded p-2'}
     ${align === "left" ? "text-left" : "text-center"}
   `}
 >

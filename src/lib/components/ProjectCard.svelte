@@ -4,7 +4,7 @@
   export let projects;
 </script>
 
-<section class="gutter py-16 lg:py-24 xl:py-32">
+<section class="gutter py-8 lg:py-12 xl:py-16">
   <h3
     class="text-center text-primaryColor text-2xl font-black font-fraunces uppercase tracking-[0.25rem] md:py-10 md:text-3xl underline"
   >

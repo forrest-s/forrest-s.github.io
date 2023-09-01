@@ -32,11 +32,11 @@ export function load() {
     },
   ];
 
-  const services = [
+  const knowledges = [
     {
       title: "Front End",
       content:
-        "Front End technologies",
+        "Looking for a seasoned front-end specialist who can turn your digital dreams into reality? That's where I come in. My proficiency in JavaScript, CSS, and HTML empowers me to architect interfaces that captivate users from the first glance. With React and Svelte in my toolkit, I can develop dynamic web applications that deliver impactful user experiences. My adaptability shines as I harness APIs to enhance functionality, ensure flawless teamwork through Git, and bring real-time magic using WebSockets. Through the fusion of my creative vision and technical prowess, I consistently produce front-end solutions that are not only innovative but also tailored to your unique needs. Let's embark on a journey to elevate your online presence.",
       colorTheme: "green",
       desktopImg: `${base}/images/desktop/services-1.avif`,
       technologies: ['Javascript', 'HTML', 'CSS', 'React', 'Svelte', 'JQuery', 'Websockets'],
@@ -45,7 +45,7 @@ export function load() {
     {
       title: "Back End",
       content:
-        "Forrest is a seasoned software engineer who possesses a comprehensive understanding of full stack web development, with a marked focus on back-end intricacies. His career journey has been marked by his adeptness in formulating and bringing to life back-end services. Proficient in various tools, he excels in working with SQL and NoSQL databases, graph databases, Docker, and Node.js.",
+        "Ready for a backend revolution? I'm the specialist to lead the way. AJAX/HTTP, SQL, and NoSQL databases are my playground, guaranteeing optimal data management. MongoDB serves as my canvas for scalable and resilient data storage, while Node.js enables me to craft cutting-edge applications. I'm fluent in JSON, streamlining data communication, and I orchestrate flawless deployments with Docker. Partner with me to unlock your backend's full potential and drive your digital success.",
       colorTheme: "green",
       desktopImg: `${base}/images/desktop/services-2.avif`,
       technologies: ['AJAX/HTTP', 'SQL', 'NoSql', 'MongoDB', 'Node.js', 'JSON', 'Docker'],
@@ -65,7 +65,7 @@ export function load() {
     },
     {
       image: `${base}/images/bounty-hunter-app.png`,
-      url: '',
+      url: 'https://bounty-hunter-db.onrender.com/',
       content:
         "This is a full-stack application that utilizes a database for storing bounties. Users can add bounties to the database and track their progress. The front-end is built using React, while the back-end is powered by Node.js and Express. The database is managed using MongoDB and Mongoose, which facilitates schema creation.",
       title: "Bounty Hunter",
@@ -74,7 +74,7 @@ export function load() {
     },
     {
       image: `${base}/images/books-weve-read.png`,
-      url: '',
+      url: 'https://books-weve-read.onrender.com/',
       content:
         "This web application serves as a book database, allowing users to add books along with their respective authors and genres. Users can either add a new book or explore existing books, genres, and authors. The front-end of the application is built using the React library, with react-router facilitating the routing of different views. The back-end is powered by the Express/Node.js framework, with MongoDB as the database for book storage. The Mongoose library is used for schema creation and object-document mapping. The application also features authentication via token-based encryption. The application is live on the Heroku platform.",
       title: "Books We've Read Database",
@@ -83,7 +83,7 @@ export function load() {
     },
     {
       image: `${base}/images/exercise-tracker.png`,
-      url: '',
+      url: 'https://exercise-tracker-vbmc.onrender.com/',
       content:
         "The Exercise Tracker application incorporates authentication and login features to enable users to securely track their workouts and participate in the forum. The front-end of the application is built with React, utilizing react-router for effective routing, while the back-end is powered by Node.js and Express. MongoDB serves as the database, with Mongoose supporting schema creation and object-document mapping. The app ensures security through token-based authentication and encryption. Additionally, the application is hosted live on Heroku for easy access.",
       title: "Exercise Tracker/Forum",
@@ -140,7 +140,7 @@ export function load() {
   return {
     photos,
     about,
-    services,
+    knowledges,
     projects,
     gallery,
     hero
