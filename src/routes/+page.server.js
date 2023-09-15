@@ -107,7 +107,15 @@ export function load() {
       title: "Lotr Characters",
       technologies: ['Svelte', 'Sveltekit', 'Vercel'],
       id: 6
-    }    
+    },
+    {
+      image: `${base}/images/memory-game.png`,
+      url: 'https://basicmemorycardgame.surge.sh/',
+      content: 'Back to the basics with this memory card game. 1-4 players can play a matching memory card game created with Javascript, HTML, and CSS. Deployed using surge.sh.',
+      title: 'Memory Card Game',
+      technologies: ['Javascript', 'HTML', 'CSS'],
+      id: 7
+    }
   ];
 
   const gallery = [
